@@ -16,3 +16,12 @@ tabMenu.forEach((itemMenu, index)=> {
     });
 });
 }
+
+const linkInternos = document.querySelectorAll('a[href^="#"]')
+
+function handleLink(event) {
+    console.log(event);
+} 
+linkInternos.forEach((link) => {
+    link.addEventListener('click', handleLink);
+})
