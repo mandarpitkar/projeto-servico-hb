@@ -37,5 +37,33 @@ function initAccordion() {
 }
 initAccordion();
 
-const linksInterno = document.querySelectorAll('.js-menu a[href^"#"]');
+function initScrollSuave(){
+    const linksInterno = document.querySelectorAll('.js-menu a[href^="#"]')
+
+function scrollToSection(event) {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute('href');
+    const section = document.querySelector(href);
+
+    section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'       
+    });
+
+   //FORMA ALTERNATIVO
+    //const topo = section.offsetTop;
+    // window.scrollTo({
+    //     top: topo,
+    //     behavior: 'smooth',
+    // });
+
+}
+
+linksInterno.forEach((link) => {
+    link.addEventListener('click', scrollToSection);
+})
+}
+
+
+initScrollSuave();
 
