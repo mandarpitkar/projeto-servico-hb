@@ -1,4 +1,4 @@
-function inittabMenu() {
+function initTabMenu() {
     const tabMenu = document.querySelectorAll('.js-tabmenu li');
     const tabContent = document.querySelectorAll('.js-tabcontent section');
 
@@ -18,10 +18,10 @@ function inittabMenu() {
         });
     }
 }
-inittabMenu();
+initTabMenu();
 
 
-function initlinkInternos(){
+function initLinkInternos(){
     const linkInternos = document.querySelectorAll('a[href^="#"]')
 
     function handleLink(event) {
@@ -31,7 +31,7 @@ function initlinkInternos(){
         link.addEventListener('click', handleLink);
     })
 }
-initlinkInternos();
+initLinkInternos();
 
 
 // function clickMenu() {
