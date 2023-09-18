@@ -20,24 +20,22 @@ function initTabMenu() {
 }
 initTabMenu();
 
+function initAccordion() {
+    const accordionList = document.querySelectorAll('.js-accordion dt')
+    if (accordionList.length) {
+        function activeAccordion() {
+            this.classList.toggle('ativo');
+            this.nextElementSibling.classList.toggle('ativo');
 
-function initLinkInternos(){
-    const linkInternos = document.querySelectorAll('a[href^="#"]')
-
-    function handleLink(event) {
-        console.log(event);
+        }
+        accordionList.forEach((item) => {
+            item.addEventListener('click', activeAccordion);
+        })
     }
-    linkInternos.forEach((link) => {
-        link.addEventListener('click', handleLink);
-    })
+
+
 }
-initLinkInternos();
+initAccordion();
 
+const linksInterno = document.querySelectorAll('.js-menu a[href^"#"]');
 
-// function clickMenu() {
-//     if(menu.style.display == 'block'){
-//         menu.style.display = 'none';
-//     } else {
-//         menu.style.display = 'block';
-//     }
-// }
