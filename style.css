@@ -3,6 +3,10 @@ body, h1, h2, ul, li, p, dd, dt, dl{
     padding: 0px;
 }
 
+html, body {
+    min-height: 100vh;
+}    
+
 img {
     display: block;
     max-width: 100%;
@@ -17,10 +21,9 @@ body {
     background-color: #faf6ed;
     color: #222;
     -webkit-font-smoothing: antialiased;
-    /* display: grid; */
+    display: grid;
     grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
 }
-
 
 .menu {
     grid-column: 3 / 5;
