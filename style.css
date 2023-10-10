@@ -226,6 +226,15 @@ iframe {
        
     }
 
+    
+    }
+    @media (max-width: 360px) {
+        .menu {
+            display: none;
+
+        }
+    }
+
     /* .menu ul li {
         display: flex;
         align-items: center;
@@ -233,8 +242,6 @@ iframe {
         color: #fff;
         padding-block: 1rem; */
 
-
-}
 
 .js .js-tabcontent section {
     display: none;
